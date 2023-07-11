@@ -1,0 +1,450 @@
+body{
+	background-color: #12343B;
+}
+
+
+h1{
+	text-align: center;
+	color: #BFACE2;
+	font-size: 12mm;
+	font-family: 'Homemade Apple', cursive;
+
+}
+
+h2{
+	color: #FCFAF1;
+	text-align: center;
+	font-family: 'Marcellus', serif;
+}
+h3{
+	color: #F48484;
+}
+
+p{
+	color: #AAA6A4;
+	font-family: 'Laila', sans-serif;
+}
+
+p1{
+	color: #AAA6A4;
+	font-family: 'Laila', sans-serif;
+}
+
+
+/*creating a menu bar*/
+
+.desktop ul{
+	display: none;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style: none;
+	background-color: #EEC373;
+	height: 30px;
+	font-size: 20px;
+}
+
+/*changing colour of ul list links*/
+
+.desktop ul a{
+	text-decoration: none;
+	color: #714433;
+
+}
+
+
+/*making the item change color when hovered over it*/
+
+.desktop ul li:hover{
+	background-color: #12343b;
+}
+
+/*making the text of item change color when hovered above it*/
+.desktop ul a:hover{
+	color: #EEC373;
+}
+
+
+/*adding eliments in mobile*/
+
+.mobile ul{
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	list-style: none;
+	background-color: #EEC373;
+	height: auto;
+	font-size: 20px;
+}
+
+/*changing colour of ul list links*/
+
+.mobile ul a{
+	text-decoration: none;
+	color: #714433;
+
+}
+
+
+/*making the item change color when hovered over it*/
+
+.mobile ul li:hover{
+	background-color: #12343b;
+}
+
+/*making the text of item change color when hovered above it*/
+.mobile ul a:hover{
+	color: #EEC373;
+}
+
+.mobile:hover ul {
+  display:flex;
+}
+
+
+/*styling carousel*/
+
+#carousel{
+	overflow: hidden;
+	height: 45%;
+	width: 50%;
+	margin-top: 0;
+	margin-left: 23%;
+	margin-right: 23%;
+}
+
+#carousel figure{
+	position: relative;
+	width: 500%;
+	left: 0;
+	animation: 20s carousel infinite;
+	margin: 0;
+	
+}
+
+#carousel figure img{
+	float: left;
+	width: 20%;
+}
+
+
+@keyframes carousel{
+	0%{
+		left: 0;
+	}
+
+	20%{
+		left: 0;
+	}
+	25%{
+		left: -100%;
+	}
+	45%{
+		left: -100%;
+	}
+	50%{
+		left: -200%;
+	}
+	70%{
+		left: -200%;
+	}
+	75%{
+		left: -300%;
+	}
+	95%{
+		left: -300%;
+	}
+	100%{
+		left: -400%;
+	}
+}
+
+/*putting footer items in flex box*/
+
+.parent{
+	background-color:#714433 ;
+	display:flex;
+	justify-content:center;
+}
+
+#child{
+	list-style: none;
+	text-align:center; 
+	padding: 5px;
+}
+
+#child a{
+	text-decoration: none;
+	color: #EEC373;
+
+}
+/*making footer item change color when hovered over*/
+
+#child a:hover{
+	color: #12343b;
+}
+
+
+/* creating grids for products */
+.parent1{
+	display:grid;
+  	grid-template-columns:1fr 1fr 1fr;
+ 	grid-template-row: 1fr 1fr 1fr 1fr;
+
+}
+
+/*styling the products*/
+
+.parent1 img{
+	width: 100%;
+	height: auto;
+	border:2px solid #B5F1CC ;
+}
+
+
+/*placing image on the left side of the page*/
+
+#child1{
+	align-self: center;
+	justify-self: center;
+	grid-column-start:1 ;
+	grid-column-end: 2;
+	grid-row-start:1 ;
+	grid-row-end:2 ;
+}
+
+/*placing description of product on the right side of the page*/
+
+#child2{
+	place-self: center;
+	justify-self: start;
+	grid-column-start:2 ;
+	grid-column-end: 6;
+	grid-row-start:1 ;
+	grid-row-end:2 ;
+	padding: 20px;
+}
+
+#child3{
+	align-self: center;
+	justify-self: center;
+	grid-column-start:1 ;
+	grid-column-end: 2;
+	grid-row-start:2 ;
+	grid-row-end:3;
+
+}
+
+
+#child4{
+	place-self: center;
+	justify-self: start;
+	grid-column-start:2;
+	grid-column-end: 6;
+	grid-row-start:2 ;
+	grid-row-end:3;
+	padding: 20px;
+}
+
+#child5{
+	align-self: center;
+	justify-self: center;
+	grid-column-start:1 ;
+	grid-column-end: 2;
+	grid-row-start:3 ;
+	grid-row-end:4;
+
+}
+
+
+#child6{
+	place-self: center;
+	justify-self: start;
+	grid-column-start:2;
+	grid-column-end: 6;
+	grid-row-start:3 ;
+	grid-row-end:4;
+	padding: 20px;
+}
+
+
+
+/*styling button*/
+
+.parent1 button a{
+	text-decoration: none;
+	color: #12343b;
+}
+
+.parent1 button{
+	background-color: #B5F1CC;
+
+	
+}
+
+/*adding a wrapper so it will hold the content of the website*/
+.wrapper{
+  width: 100%;
+  max-width: 70em;
+  max-width: 80em;
+  margin: auto;
+}
+
+/*Media Query for 960px or largers*/
+
+@media screen and (min-width:60em){
+  .desktop ul{
+    display:flex;
+  }
+
+  .mobile{
+    display: none ;
+  }
+}
+
+/*Media Query for 600px or largers*/
+
+@media screen and (max-width:37.5em){
+		h1{
+	font-size:10mm ;
+	}
+
+	h2{
+		font-size: 6mm;
+
+	}
+
+	p{
+		font-size: 4mm;
+	}
+
+
+	.parent{
+	background-color:#714433 ;
+	display:flex;
+	justify-content:center;
+}
+
+#child{
+	list-style: none;
+	text-align:center; 
+	padding: 5px;
+}
+
+#child a{
+	text-decoration: none;
+	color: #EEC373;
+
+}
+/*making footer item change color when hovered over*/
+
+#child a:hover{
+	color: #12343b;
+}
+
+
+/* creating grids for products */
+.parent1{
+	display:grid;
+  	grid-template-columns:1fr 1fr;
+ 	grid-template-row: 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+/*styling the products*/
+
+.parent1 img{
+	width: 9000%;
+	height: auto;
+	border:2px solid #B5F1CC;
+}
+
+
+/*placing image on the left side of the page*/
+
+#child1{
+	align-self: center;
+	justify-self: center;
+	grid-column-start:1 ;
+	grid-column-end: 4;
+	grid-row-start:1 ;
+	grid-row-end:2 ;
+}
+
+/*placing description of product on the right side of the page*/
+
+#child2{
+	place-self: center;
+	justify-self: start;
+	grid-column-start:4;
+	grid-column-end: 4;
+	grid-row-start:2;
+	grid-row-end:3 ;
+	padding: 20px;
+}
+
+#child3{
+	align-self: center;
+	justify-self: center;
+	grid-column-start:1 ;
+	grid-column-end: 2;
+	grid-row-start:3;
+	grid-row-end:4;
+
+}
+
+
+#child4{
+	place-self: center;
+	justify-self: start;
+	grid-column-start:2;
+	grid-column-end: 6;
+	grid-row-start:4;
+	grid-row-end:5;
+	padding: 20px;
+}
+
+#child5{
+	align-self: center;
+	justify-self: center;
+	grid-column-start:1 ;
+	grid-column-end: 2;
+	grid-row-start:5;
+	grid-row-end:6;
+
+}
+
+
+#child6{
+	place-self: center;
+	justify-self: start;
+	grid-column-start:2;
+	grid-column-end: 6;
+	grid-row-start:6;
+	grid-row-end:7;
+	padding: 20px;
+}
+
+	}
+
+	/*Media Query for 768px or till 960px */
+
+@media screen and (min-width:48em) and (max-width:60em){
+
+	body{
+		background-color: #AAA6A4;
+	}
+	h1{
+		color: #12343b;
+	}
+
+	h2{
+		color: #714433;
+	}
+	p{
+		color: #12343b;
+	}
+
+	h3{
+		color: black;
+	}
+}
